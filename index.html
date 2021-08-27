@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D MAP</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+        }
+
+        #lyr_pausegame {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+
+        .ui_button_play {
+            position: absolute;
+            left: calc(50% - 75px);
+            top: calc(50% - 75px);
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 10px solid #ffffff;
+            background-color: #cccccc;
+            z-index: 2;
+        }
+
+        .ui_button_play:before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 10px;
+            border-left: 50px solid #ffffff;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="module" src="bundle.js"></script>
+    <div id="lyr_pausegame">
+    </div>
+    <a id="btn_pausegame" class="ui_button_play"><br></a>
+</body>
+
+</html>
